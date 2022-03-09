@@ -26,4 +26,9 @@ This is a simple stock application that could be used to perform basic crud oper
 1. pls check start command
 
 
-## Usage# stock-repo
+## Usage
+1. ```GET /api/v1/stocks/{id}```
+>jhdfksjfkdfjhdhdjhfkjfkdhfjdhfd </br>dfhdjhfkjdhfdhhjdhfjdhfhd
+> </br>kjsjdkjfjdjlklkdfs
+> 
+2.
