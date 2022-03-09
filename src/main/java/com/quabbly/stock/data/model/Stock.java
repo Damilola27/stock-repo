@@ -1,10 +1,6 @@
 package com.quabbly.stock.data.model;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
-import org.hibernate.annotations.CreationTimestamp;
+import lombok.*;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
@@ -14,17 +10,21 @@ import java.time.LocalDateTime;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
+@ToString
 public class Stock {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-    @Column(unique = true)
     private String name;
     private double price;
-
+    private Long quantity;
     private LocalDateTime dateCreated = LocalDateTime.now();
-    @CreationTimestamp
     private LocalDateTime dateUpdated;
 
-
+    public Stock(Long id, String name, double price, Long quantity) {
+        this.id = id;
+        this.name = name;
+        this.price = price;
+        this.quantity = quantity;
+    }
 }
