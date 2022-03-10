@@ -47,7 +47,6 @@ public class StockServiceImpl implements StockService {
 
     @Override
     public Stock getStockById(Long id) throws StockException {
-
         return stockRepository.findById(id).orElseThrow(()-> new StockException("Stock does not exist"));
     }
 

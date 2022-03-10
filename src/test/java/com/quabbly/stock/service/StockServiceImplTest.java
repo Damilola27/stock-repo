@@ -97,6 +97,7 @@ class StockServiceImplTest {
 
     @Test
     void findStockThatDoesNotExist() {
+
         when(stockRepository.findById(30L)).thenReturn(Optional.empty());
 
         StockException e = assertThrows(StockException.class, () -> stockService.getStockById(30L));

@@ -1,22 +1,19 @@
 package com.quabbly.stock.dto.request;
 
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
+
 import javax.validation.constraints.NotNull;
 
-@Getter
-@Setter
+@Data
 @AllArgsConstructor
 @NoArgsConstructor
 public class StockCreateRequest {
-    @NotNull(message = "Enter Stock Name")
+    @NotNull(message = "name cannot be empty")
     private String name;
-    @NotNull(message = "Price can not be empty")
+    @NotNull(message = "price cannot be empty")
     private double price;
-    @NotNull(message = "quantity can not be null")
+    @NotNull(message = "quantity cannot be empty")
     private Long quantity;
 
 }
