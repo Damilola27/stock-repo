@@ -27,4 +27,12 @@ public class Stock {
         this.price = price;
         this.quantity = quantity;
     }
+
+    public Stock(Long id, String name, double price, Long quantity, LocalDateTime dateUpdated) {
+        this.id = id;
+        this.name = name;
+        this.price = price;
+        this.quantity = quantity;
+        this.dateUpdated = dateUpdated;
+    }
 }
